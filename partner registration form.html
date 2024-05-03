@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partner Registration Form</title>
+<style>
+    body {
+        font-family: Times New Roman;
+        background-color: white;
+        text-align: center;
+    }
+    .container {
+        margin-bottom: 10px;
+        width: 80%;
+        height: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: gray;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        text-align: center;
+    }
+    .label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .form {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: Times New Roman;
+    }
+    .input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: Times New Roman;
+    }
+    .textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: Times New Roman;
+        text-align: center;
+    }
+    .button[type="submit"] {
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 14px 20px;
+        cursor: pointer;
+        font-family: Times New Roman;
+    }
+    .button[type="submit"]:hover {
+        background-color: black;
+    }
+    .div class {
+        font-family: Times New Roman;
+    }
+    .div id {
+        font-family: Times New Roman;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Partner Registration Form</h2>
+<form id="partnerForm" action="submit.php" method="post">
+  <div class="form-group">
+  <label for="fullName">Full Name:</label><br>
+  <input type="text" id="fullName" name="fullName" placeholder="Enter your full name here" required></div>
+  <br><br>
+  <div class="form-group">
+  <label for="date">Date of Birth:</label><br>
+  <input type="date" id="date" name="date" required></div>
+  <br><br>
+  <div class="form-group">
+  <label for="age">Your Age:</label><br>
+  <input type="age" id="age" name="age" placeholder="Enter your age here" required></div>
+  <br><br>
+  <label for="gender">Your Gender:</label><br>
+                <select id="gender" name="gender" required>
+                <option type="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
+  <br>   
+  <label for="message">Your Likes and/or Favorites (i.e. foods, desert, drinks, music, movies, etc.):</label><br>
+  <textarea id="message" name="message" rows="4" placeholder="Enter your answer here" required></textarea>
+  <br><br>
+  <label for="message">Your Dislikes (i.e. foods, desert, drinks, music, movies, etc.):</label><br>
+  <textarea id="message" name="message" rows="4" placeholder="Enter your answer here" required></textarea>
+  <br><br>
+  <label for="message">Your Hobbies:</label><br>
+  <textarea id="message" name="message" rows="4" placeholder="Enter your answer here" required></textarea>
+  <br><br>
+  <label for="message">What do you like about me? and Why?</label><br>
+  <textarea id="message" name="message" rows="4" placeholder="Enter your answer here" required></textarea>
+  <br><br>
+  <label for="message">What do you hate about me? and Why?</label><br>
+  <textarea id="message" name="message" rows="4" placeholder="Enter your answer here" required></textarea>
+  <br><br>
+  <label for="message">Why do you want to pursue a relationship with me? Explain.</label><br>
+  <textarea id="message" name="message" rows="4" placeholder="Enter your answer here" required></textarea>
+  <br><br>                                     
+  <button type="submit">Submit</button>
+</form>
+<div id="thankYouMessage" style="display: none;"><br><br>
+  <p>Thank you for filling out this form. <br>Your response has been recorded.</p>
+</div>
+<script>
+document.getElementById("partnerForm").addEventListener("submit", function(event){
+  event.preventDefault();
+  document.getElementById("partnerForm").style.display = "none";
+  document.getElementById("thankYouMessage").style.display = "block";
+});
+</script>
+</div>
+</body>
+</html>
